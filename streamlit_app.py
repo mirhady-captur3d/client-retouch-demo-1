@@ -14,7 +14,7 @@ st.write("")
 
 def centered_image_comparison(img1, img2, label1, label2, width=900):
     # Use columns to create a centered layout
-    left, mid, right = st.columns([0, 6, 1])
+    left, mid, right = st.columns([1, 6, 1])
     with mid:
         image_comparison(
             img1=img1,
