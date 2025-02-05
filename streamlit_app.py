@@ -2,8 +2,7 @@ import streamlit as st
 from streamlit_image_comparison import image_comparison
 import cv2
 
-st.set_page_config("Captur3d AI photo retouching alpha - demo test", "🔭", layout="left")
-
+st.set_page_config("Captur3d AI photo retouching alpha - demo test", "🔭", layout="centered")
 
 st.markdown("""
     <style>
