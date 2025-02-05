@@ -12,8 +12,20 @@ st.write("")
 "A combination of automated color correction tasks and photo upscaling"
 st.write("")
 
+def centered_image_comparison(img1, img2, label1, label2, width=900):
+    # Use columns to create a centered layout
+    left, mid, right = st.columns([1, 6, 1])
+    with mid:
+        image_comparison(
+            img1=img1,
+            img2=img2,
+            label1=label1,
+            label2=label2,
+            width=width  # 1.5x original width (assuming original was ~600px)
+        )
+
 st.markdown("### test image 1")
-image_comparison(
+centered_image_comparison(
     img1="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/1.jpg",
     img2="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/1_after.jpg",
     label1="input",
@@ -21,7 +33,7 @@ image_comparison(
 )
 
 st.markdown("### test image 2")
-image_comparison(
+centered_image_comparison(
     img1="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/2.jpg",
     img2="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/2_after.jpg",
     label1="input",
@@ -29,7 +41,7 @@ image_comparison(
 )
 
 st.markdown("### test image 3")
-image_comparison(
+centered_image_comparison(
     img1="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/3.jpg",
     img2="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/3_after.jpg",
     label1="input",
@@ -37,7 +49,7 @@ image_comparison(
 )
 
 st.markdown("### test image 4")
-image_comparison(
+centered_image_comparison(
     img1="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/4.jpg",
     img2="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/4_after.jpg",
     label1="input",
@@ -45,7 +57,7 @@ image_comparison(
 )
 
 st.markdown("### test image 5")
-image_comparison(
+centered_image_comparison(
     img1="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/5.jpg",
     img2="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/5_after.jpg",
     label1="input",
@@ -53,7 +65,7 @@ image_comparison(
 )
 
 st.markdown("### test image 6")
-image_comparison(
+centered_image_comparison(
     img1="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/6.jpg",
     img2="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/6_after.jpg",
     label1="input",
@@ -61,7 +73,7 @@ image_comparison(
 )
 
 st.markdown("### test image 7")
-image_comparison(
+centered_image_comparison(
     img1="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/7.jpg",
     img2="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/7_after.jpg",
     label1="input",
@@ -69,7 +81,7 @@ image_comparison(
 )
 
 st.markdown("### test image 8")
-image_comparison(
+centered_image_comparison(
     img1="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/8.jpg",
     img2="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/8_after.jpg",
     label1="input",
@@ -77,7 +89,7 @@ image_comparison(
 )
 
 st.markdown("### test image 9")
-image_comparison(
+centered_image_comparison(
     img1="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/9.jpg",
     img2="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/9_after.jpg",
     label1="input",
@@ -85,7 +97,7 @@ image_comparison(
 )
 
 st.markdown("### test image 10")
-image_comparison(
+centered_image_comparison(
     img1="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/10.jpg",
     img2="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/10_after.jpg",
     label1="input",
