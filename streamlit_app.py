@@ -2,6 +2,9 @@ import streamlit as st
 from streamlit_image_comparison import image_comparison
 import cv2
 
+st.set_page_config("Captur3d AI photo retouching alpha - demo test", "🔭", layout="left")
+
+
 st.markdown("""
     <style>
     .main .block-container {
@@ -18,11 +21,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 
-st.set_page_config("Captur3d AI photo retouching alpha - demo test", "🔭", layout="centered")
-
-
 st.header("🔭 Magic retouch")
-
 st.write("")
 "A combination of automated color correction tasks and photo upscaling"
 st.write("")
