@@ -14,15 +14,15 @@ st.write("")
 
 def centered_image_comparison(img1, img2, label1, label2, width=1000):
     # Use columns to create a centered layout
-    left, mid, right = st.columns([1, 10, 5])
-    with mid:
-        image_comparison(
-            img1=img1,
-            img2=img2,
-            label1=label1,
-            label2=label2,
-            width=width  # 1.5x original width (assuming original was ~600px)
-        )
+    # left, mid, right = st.columns([1, 10, 5])
+    # with mid:
+    image_comparison(
+        img1=img1,
+        img2=img2,
+        label1=label1,
+        label2=label2,
+        width=width  # 1.5x original width (assuming original was ~600px)
+    )
 
 st.markdown("### test image 1")
 centered_image_comparison(
