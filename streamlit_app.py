@@ -1,23 +1,29 @@
 import streamlit as st
 from streamlit_image_comparison import image_comparison
-import cv2
 
-st.set_page_config("Captur3d AI photo retouching alpha - demo test", "🔭", layout="centered")
+st.set_page_config(
+    "Captur3d AI photo retouching alpha - demo test", 
+    "🔭", 
+    layout="wide"  # Changed to wide layout
+)
 
+# Custom CSS with proper ordering
 st.markdown("""
     <style>
-    .main .block-container {
-        max-width: 100% !important;
-        padding-left: 2rem;
-        padding-right: 2rem;
+    div[data-testid="column"] {
+        text-align:center;
     }
-    .center-container {
-        display: flex;
-        justify-content: center;
-        width: 100%;
+    
+    .stImageComparison {
+        margin: 0 auto;
+    }
+    
+    /* Adjust these values as needed */
+    .stImageComparison > div {
+        max-width: 1400px !important;
     }
     </style>
-    """, unsafe_allow_html=True)
+""", unsafe_allow_html=True)
 
 
 st.header("🔭 Magic retouch")
@@ -30,15 +36,15 @@ def centered_image_comparison(img1, img2, label1, label2, width=1200):
     st.markdown(f'<div class="center-container">', unsafe_allow_html=True)
 
     # Use columns to create a centered layout
-    # left, mid, right = st.columns([1, 10, 5])
-    # with mid:
-    image_comparison(
-        img1=img1,
-        img2=img2,
-        label1=label1,
-        label2=label2,
-        width=width  # 1.5x original width (assuming original was ~600px)
-    )
+    left, mid, right = st.columns([1, 8, 1])
+    with mid:
+        image_comparison(
+            img1=img1,
+            img2=img2,
+            label1=label1,
+            label2=label2,
+            width=width  # 1.5x original width (assuming original was ~600px)
+        )
 
     st.markdown('</div>', unsafe_allow_html=True)
 
