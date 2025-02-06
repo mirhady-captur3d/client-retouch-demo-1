@@ -43,8 +43,8 @@ def centered_image_comparison(img1, img2, label1, label2, width=1400):
             img2=img2,
             label1=label1,
             label2=label2,
-            width=100%
-            # width=width  # 1.5x original width (assuming original was ~600px)
+            # width=100%
+            width=width
         )
 
     st.markdown('</div>', unsafe_allow_html=True)
