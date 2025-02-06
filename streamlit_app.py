@@ -36,7 +36,7 @@ def centered_image_comparison(img1, img2, label1, label2, width=1400):
     st.markdown(f'<div class="center-container">', unsafe_allow_html=True)
 
     # Use columns to create a centered layout
-    left, mid, right = st.columns([1, 10, 1])
+    left, mid, right = st.columns([4, 10, 1])
     with mid:
         image_comparison(
             img1=img1,
