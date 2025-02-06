@@ -20,7 +20,7 @@ st.markdown("""
     
     /* Adjust these values as needed */
     .stImageComparison > div {
-        max-width: 1400px !important;
+        width: 100% !important;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -43,7 +43,7 @@ def centered_image_comparison(img1, img2, label1, label2, width=1400):
             img2=img2,
             label1=label1,
             label2=label2,
-            width=width  # 1.5x original width (assuming original was ~600px)
+            # width=width  # 1.5x original width (assuming original was ~600px)
         )
 
     st.markdown('</div>', unsafe_allow_html=True)
