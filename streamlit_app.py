@@ -25,11 +25,6 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-
-st.header("🔭 Magic retouch alpha test")
-st.write("")
-st.write("")
-
 def centered_image_comparison(img1, img2, label1, label2, width=1400):
 
     st.markdown(f'<div class="center-container">', unsafe_allow_html=True)
@@ -47,6 +42,67 @@ def centered_image_comparison(img1, img2, label1, label2, width=1400):
         )
 
     st.markdown('</div>', unsafe_allow_html=True)
+
+st.header("🔭 Magic retouch alpha update - 26 Feb 2025")
+st.write("")
+st.write("")
+
+st.markdown("### color outside window - before")
+centered_image_comparison(
+    img1="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client3/13.jpg",
+    img2="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client3/13_after.jpg",
+    label1="input",
+    label2="magic retouch",
+)
+
+st.markdown("### color outside window - after")
+centered_image_comparison(
+    img1="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client3/13.jpg",
+    img2="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client3/13_after2.jpg",
+    label1="input",
+    label2="magic retouch",
+)
+
+
+st.markdown("### reduced yellow saturation")
+centered_image_comparison(
+    img1="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/3.jpg",
+    img2="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/3_after.jpg",
+    label1="input",
+    label2="magic retouch",
+)
+
+st.markdown("### reduced yellow saturation - after")
+centered_image_comparison(
+    img1="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/3_after.jpg",
+    img2="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/3_after2.jpg",
+    label1="input",
+    label2="magic retouch",
+)
+
+st.markdown("### reduced yellow saturation")
+centered_image_comparison(
+    img1="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/6_after.jpg",
+    img2="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/6_after2.jpg",
+    label1="input",
+    label2="magic retouch",
+)
+
+st.markdown("### reduced yellow saturation - after")
+centered_image_comparison(
+    img1="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/6.jpg",
+    img2="https://automated-photo-retouching-test.s3.ap-southeast-2.amazonaws.com/client/6_after.jpg",
+    label1="input",
+    label2="magic retouch",
+)
+
+
+
+st.header("🔭 Magic retouch alpha test - Feb 2025")
+st.write("")
+st.write("")
+
+
 
 st.markdown("### test image 1")
 centered_image_comparison(
